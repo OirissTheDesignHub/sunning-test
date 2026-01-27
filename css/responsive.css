@@ -1,0 +1,211 @@
+/* Base adjustments for small screens */
+@media (max-width: 480px) and (orientation: portrait){
+	.banner{
+		height: 50vh;
+		padding: 2rem 1rem;
+    gap: 5px;
+	}
+	.banner h1{
+		font-size: 1.6rem;
+		line-height: 1.1;
+		margin-bottom: 0.5rem;
+		padding: 0 0.25rem;
+	}
+	.banner p{
+		font-size: 0.95rem;
+		max-width: 30rem;
+		padding: 0 0.25rem;
+	}
+	/* -----------------fonts---------- */
+	.rd-m-h1{
+		font-size: 27px;
+	}
+	.rd-m-h2{
+		font-size: 14px;
+	}
+
+  	/* -------------------common---------- */
+  	.mt{
+  	  margin-top: 25px;
+  	}
+  	.footer{
+		gap: 20px;
+		padding: 10px;
+  	}
+  	.footer-img{
+		height: 100px;
+		width: auto;
+  	}
+  	.btn1{
+		font-size: 18px;
+  	}
+  	.card{
+		border-radius: 15px;
+  	}
+  	.card1{
+		min-width: 200px;
+		max-height: 180px;
+		padding: 20px;
+  	}
+  	.flex-con1{
+		gap: 20px;
+  	}
+
+  	.logo{
+  		width: 120px;
+  	}
+  	.smd-bg-b{
+  		background-color: black;
+  	}
+  	.smd-bg-o{
+  		background-color: #FF8036;    
+  	}
+  	/* -----------services page--------------- */
+  	.service-flex{
+		gap: 15px;
+  	}
+
+  	/* ---------------- about us page ------- */
+  	.card_img{
+		height: 60px;
+	}
+
+	/* ------------------ font size --------- */
+	.fs-big{
+		font-size: 70px;
+	}
+	.fs-18{
+		font-size: 16px;
+	}
+
+	/* --------------------- home page -------- */
+	.what-we-do{
+		grid-template-columns: repeat(1,1fr);
+		gap: 0px;
+	}
+	.what-we-do-flex{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.what-we-do > div .what-we-do-flex {
+	  display: flex;
+	  gap: 0px;
+	  width: 100%;
+	}
+	.what-we-do .what-we-do-flex img{
+		height: 50px !important;
+		width: 70px;
+	}
+
+}
+
+/* Mobile landscape — slightly larger text and taller banner */
+@media (max-width: 667px)/*  and (orientation: landscape) */ {
+
+	.logo{
+		width: 200px !important;
+	}
+		.what-we-do{
+		grid-template-columns: repeat(1,1fr);
+		gap: 0px;
+	}
+	.what-we-do-flex{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.what-we-do > div .what-we-do-flex {
+	  display: flex;
+	  gap: 0px;
+	  width: 100%;
+	}
+	.what-we-do .what-we-do-flex img{
+		height: 50px !important;
+		width: 70px;
+	}
+
+}
+
+/* Tablet */
+@media (min-width: 668px) and (max-width: 1024px) {
+	.banner{
+		min-height: 75vh;
+		padding: 3rem 2rem;
+		background-position: center;
+	}
+	.banner h1{
+		font-size: 2.4rem;
+		max-width: 48rem;
+	}
+	.banner p{
+		font-size: 1.1rem;
+		max-width: 50rem;
+	}
+	.smd-bg-b{
+		background-color: black;
+	}
+	.smd-bg-o{
+		background-color: #FF8036;
+
+	}
+	.flex-con > .card{
+    	flex: 1 1 calc(50% - 10px);
+  	}
+
+	.what-we-do{
+		grid-template-columns: repeat(1,1fr);
+		gap: 40px;
+	}
+	.markq_img {
+  	  width: 120px;
+  	  height: 180px;
+  	  border-radius: 20px;
+  	  margin-top: 12px;
+  	}
+  	.marquee-wrapper {
+  	  gap: 12px;
+  	}
+}
+
+
+@media (max-width: 1024px) {
+	.nav .bi-list { display: inline-block; color: var(--white); }
+	.header.scrolled .nav .bi-list { color: var(--black); }
+	.nav-links { display: none; }
+}
+
+/* Laptop */
+@media (min-width: 1025px) and (max-width: 1366px) {
+	.banner{
+		min-height: 85vh;
+		padding: 4rem 3rem;
+	}
+	.banner h1{ font-size: 3rem; }
+	.banner p{ font-size: 1.2rem; }
+	.nav .bi-list { display: none; }
+	.flex-con > .card{
+		flex: 1 1 calc(50% - 10px);
+	}
+	.markq_img {
+    	width: 220px;
+    	height: 320px;
+    	border-radius: 40px;
+    	margin-top: 24px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1367px) {
+	.banner{
+		padding: 5rem 4rem;
+	}
+	.banner h1{ font-size: 3.5rem; }
+	.banner p{ font-size: 1.25rem; }
+
+	/* Force two value cards per row on large desktops */
+	.flex-con > .card{
+		flex: 1 1 calc(50% - 10px);
+	}
+}
+
