@@ -1,0 +1,82 @@
+.fade-in{
+    animation: fade-in 1s linear forwards;
+}
+
+@keyframes fade-in {
+    from{
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.fade-up{
+    transform: translateY(40px);
+    animation: fadeUp 1s ease forwards;
+    animation-timeline: view();
+    animation-range: entry 35% cover 40%;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scale-up{
+    transition: transform 0.3s ease-in-out;
+}
+.scale-up:hover{
+    transform: scale(1.05);
+}
+
+/* ---------------------------- our port folio section ----------------------------- */
+
+/* Marquee Animation Styles */
+.markq_img{
+    height: 417px;
+    width: 289px;
+    background-color: #D9D9D9;
+    border-radius: 59px;
+    transform: rotate(5deg);
+    margin-top: 40px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.markq_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.marque_section {
+    position: relative;
+    width: 100vw;
+    max-width: 100%;
+    min-height: 480px;
+    overflow: hidden;
+    background: transparent;
+    display: block;
+}
+.rmarquee-wrappe,
+.marquee-wrapper {
+    display: flex;
+    gap: 30px;
+    width: max-content;
+    animation: marquee 24s linear infinite;
+}
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
