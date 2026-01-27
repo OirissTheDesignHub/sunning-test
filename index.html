@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sunning Your Way — digital marketing agency helping brands grow with Google Ads, Facebook & Instagram Ads, SEO, and content creation.">
+  <meta name="keywords" content="digital marketing, SEO, Google Ads, Facebook Ads, Instagram Ads, content marketing, brand growth">
+  <meta name="author" content="Sunning Your Way">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#ffffff">
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sunning Your Way — Digital Marketing">
+  <meta property="og:description" content="We help brands grow with data-driven digital marketing: Google Ads, social ads, SEO, and content." />
+  <meta property="og:url" content="https://sunningyourway.com/">
+  <meta property="og:image" content="https://sunningyourway.com/media/icons/fav%201.svg">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sunning Your Way — Digital Marketing">
+  <meta name="twitter:description" content="We help brands grow with data-driven digital marketing: Google Ads, social ads, SEO, and content.">
+  <meta name="twitter:image" content="https://sunningyourway.com/media/icons/fav%201.svg">
+  <title>sunning your way</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/slider.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="shortcut icon" href="media/icons/fav 1.svg" type="image/x-icon">
+</head>
+<body>
+  <header class="header" id="header">
+    <nav class="nav">
+        <a href="index.html">
+          <img src="media/icons/logo_img.png" alt="sunning logo" class="logo" id="l_white">
+          <img src="media/icons/logo_black.png" alt="sunning logo" class="logo" id="l_black">
+        </a>
+        <ul class="nav-links" type="none">
+          <li><a href="index.html" class="nav-link active">HOME</a></li>
+          <li><a href="about.html"  class="nav-link">ABOUT US</a></li>
+          <li><a href="service.html"  class="nav-link">SERVICES</a></li>
+          <li><a href="contact.html"  class="nav-link">CONTACT US</a></li>
+          <button class="btn scale-up" onclick=Tack_to_contac()>GET A FREE CONSULTATION</button>
+        </ul>
+        <i id="menuBtn" class="bi bi-list nav-link" role="button" tabindex="0" aria-label="Open menu"></i>
+    </nav>
+  </header>
+  <!-- Mobile sidebar overlay and panel -->
+  <div id="sidebarOverlay" class="sidebar-overlay" aria-hidden="true"></div>
+  <aside id="mobileSidebar" class="sidebar" aria-hidden="true">
+    <button class="close-btn" id="closeBtn" aria-label="Close menu"><i class="bi bi-x-lg"></i></button>
+    <ul class="sidebar-links" type="none">
+      <li><a href="index.html" class="nav-link">HOME</a></li>
+      <li><a href="about.html" class="nav-link active">ABOUT US</a></li>
+      <li><a href="service.html" class="nav-link">SERVICES</a></li>
+      <li><a href="contact.html" class="nav-link">CONTACT US</a></li>
+      <button class="btn scale-up" onclick=Tack_to_contac()>GET A FREE CONSULTATION</button>
+    </ul>
+  </aside>
+  <main>
+    <!-- -----------------------------------banner section-------------------------------------  -->
+    <div class="slider">
+      <div class="slide active" style="background-image: url('media/banners/home-banner.1.svg');">
+        <h1>
+          <span class="fs-sm">Your</span><br>
+          <span class="fs-big">BRAND</span><br>
+          <span class="fs-sm">Deserves the</span><br>
+          <span class="fs-big">SPOTLIGHT</span>
+          <button class="btn scale-up" onclick=Tack_to_contac() style="font-size: 24px;font-weight: 500;">Start Growing Today</button>
+        </h1>
+      </div>
+      <div class="slide" style="background-image: url('media/banners/home-banner.2.svg');">
+        <h1>
+          <span class="fs-sm">Get Our Special</span><br>
+          <span class="fs-big">PACKAGE</span><br>
+          <span class="fs-sm">At Our Special Price</span><br>
+          <span class="fs-big tc-o">$299</span><br>
+          <button class="btn scale-up" onclick=Tack_to_contac() style="font-size: 24px;font-weight: 500;">Know more</button>
+        </h1>
+      </div>
+    </div>
+    
+    <!-- -----------------------------------why sunning section-------------------------------------  -->
+    <section class="content">
+      <section class="mt" style="display: flex;justify-content: space-between; align-items: center;flex-wrap: wrap;">
+        <img src="media/banners/why sunning.svg" alt="why sunning image">
+        <div>
+          <p style="max-width: 800px; font-size: 24px;">We help your brand grow with smart digital marketing that delivers real results. Our strategies are tailored to your business so your online presence stands out and drives consistent sales.
+            From Google Ads, Facebook and Instagram Ads, SEO and content creation, we combine data and creativity to attract and convert your ideal customers.</p>
+            <ul class="tc-o mt-10" style="font-size: 22px;margin-left: 40px;">
+              <li>Measurable growth</li>
+              <li>Stronger visibility</li>
+              <li>Your success, your way</li>
+            </ul>
+        </div>
+      </section>
+    </section>
+    <!-- -----------------------------------what we do section-------------------------------------  -->
+    <section class="full-con bg-lo mt">
+      <h1 class="txt-c mt-50 mb">
+        <span>What </span>
+        <span class="tc-o">WE </span>
+        <span>do?</span>
+      </h1>
+      <div id="what-we-do" class="what-we-do">
+
+      </div>
+    </section>
+    <!-- -----------------------------------  review section ----------------------------------------- -->
+    <section class="mb">
+      <h1 class="txt-c mt rd-m-h1">
+        <span>What our </span>
+        <span class="tc-o">Clients </span>
+        <span>say about us?</span>
+      </h1>
+
+
+      <div id="reviews_section" class="content reviews_section mt-10">
+        <!-- Reviews from scripts/review.json will be rendered here -->
+      </div>
+    </section>
+    <!-- ----------------------------------- Our track record section--------------------------  -->
+    <section class="bg-o">
+      <section class="content">
+        <h1 class="tc-w txt-c pd-t">Our Track Record.</h1>
+        <div class="track-con">
+          <div class="track_card fit-img" style="background-image: url('media/portfolio/viwes_image 1.svg');">
+            <div>
+              <h1 class="fs-big">150K+</h1>
+              <h2 class="fs-sm">VIEWS</h2>
+            </div>
+            <p class="fs-20">We’ve successfully delivered 1M+ views across campaigns, helping brands increase visibility, build trust, and connect with the right audience</p>
+          </div>
+
+          <div class="track_card fit-img" style="background-image: url('media/portfolio/impresseion 1.svg');">
+            <div>
+              <h1 class="fs-big">1M+</h1>
+              <h2 class="fs-sm">IMPRESSIONS</h2>
+            </div>
+            <p class="fs-20">Our campaigns have generated over 1M+ impressions, driving stronger brand visibility and helping businesses reach the audiences that matter most</p>
+          </div>
+
+          <div class="track_card fit-img" style="background-image: url('media/portfolio/rating 1.svg');">
+            <div>
+              <h1 class="fs-big">4.9/5</h1>
+              <h1 class="fs-sm">RATING</h1>
+            </div>
+            <p class="fs-20">Proudly rated 4.9/5 by our clients for delivering reliable, result-driven digital marketing solutions</p>
+          </div>
+        </div>
+      </section>
+    </section>
+
+
+
+    <!-- ----------------------------------- Our portfolio section--------------------------  -->
+    <section class="mt">
+     <h1 class="txt-c mb">
+      <span class="tc-b">Our </span>
+      <span class="tc-o">Portfolio</span>
+     </h1>
+     
+      <section class="marque_section">
+      <!-- js code included init -->  
+      </section>
+    </section>
+
+    <!-- -----------------------------------FAQ section-------------------------------------  -->
+    <section class="content">
+      <h1 class="mt">FAQs</h1>
+      <div id="faq_section">
+
+      </div>
+    </section>
+    
+    
+    
+  </main>
+  <!-- ------------------------------------------- footer --------------------------------------- -->
+  <footer>
+    <section class="footer-out tc-w mt">
+      <section class="content footer">
+        <img class="footer-img" src="media/icons/footer_img.svg" alt="" loading="lazy">
+        <ul type="none">
+          <h3>Quick Links</h3>
+          <br/>
+          <li class="mt-10"><a class="tc-o td-none" href="index.html">HOME</a></li>
+          <li class="mt-10"><a class="tc-w td-none" href="about.html">ABOUT US</a></li>
+          <li class="mt-10"><a class="tc-w td-none" href="service.html">SERVICES</a></li>
+          <li class="mt-10"><a class="tc-w td-none" href="contact.html">CONTACT US</a></li>
+          
+        </ul>
+
+        <section>
+          <h3>Let’s Talk</h3>
+          <h3 class="mt-10">
+            <span><i class="bi bi-telephone-fill tc-o"></i></span>
+            <span class="ml"><a href="tel:+1-226-926-3390" class="tc-o td-none">+1-226-926-3390</a></span>
+          </h3>
+          <br>
+          <h3 class="mt-10">Drop Us a Message</h3>
+          <h3 class="mt-10">
+            <span><i class="bi bi-envelope-fill tc-o"></i></span>
+            <span class="ml"><a href="mailto:sunningyourway@gmail.com" class="tc-o td-none">sunningyourway@gmail.com</a></span>
+          </h3>
+          <br>
+          <h3>
+            <span>Follow Us</span>
+            <span class="ml">
+              <a href="https://www.facebook.com/share/1CrLQnoLuu/?mibextid=wwXIfr" target="_blank"><i class="bi bi-facebook tc-o"></i></a>
+            </span>
+            <span class="ml">
+              <a href="https://www.instagram.com/sunningyourway?igsh=OHp3MGV2ajlsMWNq&amp;utm_source=qr" target="_blank"><i class="bi bi-instagram tc-o"></i></a>
+            </span>
+            <span class="ml">
+              <a href="https://www.linkedin.com/company/sunning/" target="_blank"><i class="bi bi-linkedin tc-o"></i></a>
+            </span>
+          </h3>
+        </section>
+      </section>
+      <button class="mb btn1 scale-up" onclick=Tack_to_contac()>GET A FREE CONSULTATION</button>
+    </section>
+  </footer>
+  <script src="scripts/animation.js"></script>
+  <script src="scripts/main.js"></script>
+  <script src="scripts/slider.js"></script>
+</body>
+</html>
