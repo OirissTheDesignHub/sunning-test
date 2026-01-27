@@ -1,0 +1,74 @@
+[
+    {
+        "id":"digital-strategy",
+        "title":"Digital Strategy",
+        "img":"media/icons/digital Strategy.svg",
+        "h1":"A Smarter Blueprint for Your Online Success",
+        "btn_txt":"See How",
+        "p":"A results-driven business starts with a strategy that understands your goals and your audience. At Sunning Your Way, we build a customized digital roadmap that helps you stand out, connect with the right customers, and grow with confidence in an ever changing online world"
+    },
+    {
+        "id":"Pay-Per-Click",
+        "title":"Pay-Per-Click (PPC) Advertising",
+        "img":"media/icons/pay-per-click.svg",
+        "h1":"Instant Visibility. Real Conversions",
+        "btn_txt":"See PPC Results",
+        "p":"If you want results fast, PPC is the way to go. We design and manage laser-targeted ad campaigns that drive qualified traffic straight to your website. With smart bidding and audience targeting, we make sure your business shows up in front of the right people at the right time — and turns clicks into customers"
+    },
+    {
+        "id":"search-engine-optimization",
+        "title":"Search Engine Optimization (SEO)",
+        "img":"media/icons/seo_optimization.svg",
+        "h1":"Be Seen. Be Chosen. Be Trusted",
+        "btn_txt":"Get Found Online",
+        "p":"Ranking on Google matters. We help your business rise to the top with proven SEO strategies that boost visibility, attract qualified traffic, and build long-term authority. Our approach ensures your ideal customers can find you exactly when they need you, ahead of your competitors"
+    },
+    {
+        "id":"social-media-advertising",
+        "title":"Social Media Advertising",
+        "img":"media/icons/social_media.svg",
+        "h1":"Connect, Engage, and Convert on Every Platform",
+        "btn_txt":"Boost My Social",
+        "p":"Your customers spend hours every day on social media. We help your brand show up at the right moment with targeted ads that cut through the noise and drive real action. With smart campaigns across Facebook, Instagram, LinkedIn, and TikTok, we turn attention into followers and followers into loyal customers"
+    },
+    {
+        "id":"content-marketing",
+        "title":"Content Marketing",
+        "img":"media/icons/content_marketing.svg",
+        "h1":"Content That Educates, Engages, and Converts",
+        "btn_txt":"Grow With Content",
+        "p":"Your content should do more than fill space. It should tell your story, strengthen your brand voice, and inspire your audience to take action. At Sunning Your Way, we create strategic content that builds trust, boosts visibility, and turns interest into real business results"
+    },
+    {
+        "id":"website-design-development",
+        "title":"Website Design & Development",
+        "img":"media/icons/web_design_development.svg",
+        "h1":"Build a Website That Works as Hard as You Do",
+        "btn_txt":"See Web Services",
+        "p":"Your website is often the first impression customers get of your brand. We help you make it count by designing and developing modern, user-friendly, and high-performing websites. They look great, load fast, and drive real business results by turning visitors into customers"
+    },
+    {
+        "id":"social-media-management",
+        "title":"Social Media Management",
+        "img":"media/icons/social_media_management.svg",
+        "h1":"Build Connections, Grow Community, Strengthen Your Brand",
+        "btn_txt":"Manage My Socials",
+        "p":"Social media is more than posting content. It is your personality, your digital voice, and your direct line to customers. We manage your presence from strategy to posting, ensuring your brand stays consistent, engaging, and impactful across every platform so you stay top-of-mind"
+    },
+    {
+        "id":"conversion-rate-optimization",
+        "title":"Conversion Rate Optimization (CRO)",
+        "img":"media/icons/cro.svg",
+        "h1":"Turn Clicks Into Customers",
+        "btn_txt":"Increase My Conversions",
+        "p":"Traffic alone is not success. We help you convert more visitors into paying customers by optimizing your website and marketing funnel for better performance. Our CRO strategies boost sales, increase engagement, and improve ROI without increasing your ad spend"
+    },
+    {
+        "id":"crm-implementation",
+        "title":"CRM Implementation",
+        "img":"media/icons/crm.svg",
+        "h1":"Streamline Customer Management and Drive Growth",
+        "btn_txt":"Explore CRM Solutions",
+        "p":"Strong customer relationships are the foundation of every successful business. We set up and customize CRM systems that keep your data organized, automate workflows, and enhance every customer interaction. You stay focused on growth while your CRM supports every step of the customer journey"
+    }
+]
