@@ -77,6 +77,11 @@
 }
 @keyframes marquee {
     0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
+    100% { transform: translateX(-50%); }
+}
+
+/* Ensure items don't shrink and keep consistent width so duplicated sequence matches */
+.marquee-wrapper > .markq_img {
+    flex: 0 0 auto;
 }
 
