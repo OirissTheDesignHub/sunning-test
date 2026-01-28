@@ -164,6 +164,42 @@ body{
   text-align: left;
 }
 
+/* Calendly section styles to match site theme */
+.calendly-wrapper{
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.calendly-info{
+  flex: 1 1 420px;
+  min-width: 320px;
+}
+.calendly-container{
+  flex: 0 0 420px;
+  min-width: 320px;
+}
+.calendly-card{
+  background: var(--white);
+  border-radius: 20px;
+  padding: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  border: 1px solid rgba(0,0,0,0.04);
+}
+.calendly-card .calendly-inline-widget{
+  width: 100% !important;
+  height: 520px !important;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+@media (max-width: 880px){
+  .calendly-wrapper{flex-direction: column-reverse;}
+  .calendly-container, .calendly-info{flex:1 1 auto;}
+  .calendly-card .calendly-inline-widget{height:420px !important}
+}
+
 .align-r{
   display: block;
   margin-left: auto;
