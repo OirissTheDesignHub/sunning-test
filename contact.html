@@ -23,6 +23,7 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/responsive.css">
   <link rel="stylesheet" href="css/animations.css">
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
   <link rel="shortcut icon" href="media/icons/fav 1.svg" type="image/x-icon">
 </head>
@@ -62,13 +63,22 @@
        <p class="fade-in l-height">Your growth journey starts here<br/>Let’s Talk About Your Goals<br/>Let’s talk about your growth. Pick a date and time and enjoy a <br/>personalized strategy call filled with ideas you can use right away</p>
     </div>
 
-    <!-- ------------------------------------- calender section ----------------------------------- -->
+    <!-- ------------------------------------- calender section (with Calendly) ----------------------------------- -->
      <section class="bg-lo full-con">
       <div class="content">
-        <div class="mt mb">
-          <h1>Book Your</h1>
-          <h1 class="tc-o">Free Consultation</h1>
-          <p class="l-height">Your journey to a winning digital marketing campaign starts here!<br/>Choose a convenient date and time, and get a complimentary 30-minute strategy session with our expert.<br/>No hard selling—just actionable insights tailored to your business.</p>
+        <div class="calendly-wrapper mt mb">
+          <div class="calendly-info">
+            <h1>Book Your</h1>
+            <h1 class="tc-o">Free Consultation</h1>
+            <p class="l-height">Your journey to a winning digital marketing campaign starts here!<br/>Choose a convenient date and time, and get a complimentary 30-minute strategy session with our expert.<br/>No hard selling—just actionable insights tailored to your business.</p>
+            <p class="mt-10">Prefer phone? Call us at <a href="tel:+1-226-926-3390">+1-226-926-3390</a></p>
+          </div>
+          <div class="calendly-container">
+            <div class="calendly-card">
+              <!-- Replace the data-url value with your Calendly scheduling link -->
+                <div class="calendly-inline-widget" data-url="https://calendly.com/sunningyourway/30min?hide_landing_page_details=1&hide_event_type_details=1&hide_gdpr_banner=1" style="min-width:320px;height:420px;scrollbar-width: none;"></div>
+            </div>
+          </div>
         </div>
       </div>
      </section>
@@ -181,6 +191,7 @@
   </footer>
   <script src="scripts/animation.js"></script>
   <script src="scripts/main.js"></script>
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
   <script src="scripts/contact.js"></script>
 </body>
 </html>
