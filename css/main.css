@@ -292,6 +292,9 @@ body{
 }
 
 /* FAQ answer: keep padding hidden until the panel is opened to avoid visible box */
+.faq-plus{
+  cursor: pointer;
+}
 .faq-answer{
   padding: 0;
   box-sizing: border-box;
