@@ -1,0 +1,17 @@
+[
+    {
+        "name":"Jane Smith",
+        "comment":"Professional team and great results. Highly recommend.",
+        "rating":"4"
+    },
+    {
+        "name":"Alex Lee",
+        "comment":"They helped us grow our brand online. Very satisfied!",
+        "rating":"5"
+    },
+    {
+        "name":"John Doe",
+        "comment":"Amazing service! My website traffic doubled in a month.",
+        "rating":"5"
+    }
+]
