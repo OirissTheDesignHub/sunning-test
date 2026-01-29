@@ -29,7 +29,7 @@
 
 /* function to redirect to contactus page */
 function Tack_to_contac(){
-    window.location="/contact.html"
+    window.location="contact.html"
 }
 
 /* -------------------------- what we do ------------------------- */
