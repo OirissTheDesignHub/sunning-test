@@ -1,6 +1,6 @@
 const ser_con = document.getElementById('ser_con');
 
-fetch('scripts/service-detail.json')
+fetch('data/service-detail.json')
 .then(res=>res.json())
 .then(data=>{
     data.forEach(element => {
