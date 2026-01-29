@@ -774,3 +774,96 @@ textarea{
   max-width: 100%;
   height: 350px;
 }
+
+/* --------------------------------- fixed contact badge -------------------------- */
+.fixed-badge{
+  position: fixed;
+  right: 20px;
+  bottom: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  z-index: 9999;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  pointer-events: none;
+}
+.fixed-badge.show{
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.fixed-badge-img{
+  width: 96px; /* larger on laptop/desktop */
+  height: 96px;
+  display: block;
+  cursor: pointer;
+}
+
+/* remove button styles since the fixed badge no longer contains a button */
+.fixed-badge-btn{ display:none; }
+
+/* Modal (overlay + centered popup) */
+.fixed-badge-modal-overlay{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+.fixed-badge-modal-overlay.open{ display: flex; }
+.fixed-badge-modal{
+  max-width: 90vw;
+  max-height: 90vh;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 18px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.45);
+}
+.fixed-badge-modal img{
+  width: auto;
+  max-width: 760px;
+  height: auto;
+  max-height: 70vh;
+  display: block;
+}
+
+.popup-top{
+  width: 100%;
+  text-align: center;
+  margin-bottom: 12px;
+}
+.popup-bottom{
+  width: 100%;
+  text-align: center;
+  margin-top: 12px;
+}
+.popup-action{
+  background: var(--orange);
+  color: var(--white);
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media (max-width: 1200px){
+  .fixed-badge-img{ width: 80px; height: 80px; }
+}
+@media (max-width: 900px){
+  .fixed-badge-img{ width: 64px; height: 64px; }
+}
+@media (max-width: 600px){
+  .fixed-badge{ right: 12px; bottom: 16%; }
+  .fixed-badge-img{ width: 48px; height: 48px; }
+}
