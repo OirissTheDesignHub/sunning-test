@@ -239,3 +239,95 @@ const our_portfolio_images=[
   "media/portfolio/portfolio8.jpg",
   "media/portfolio/portfolio9.jpg"
 ];
+
+/* --------------------------------- fixed contact badge injection -------------------------- */
+(function(){
+	// Do not show on contact page
+	if(window.location.href.includes('contact.html')) return;
+
+	// Look for banner elements (home slider or banner section)
+	const bannerEl = document.querySelector('.slider, .banner');
+
+	// Create badge (image only)
+	const badge = document.createElement('div');
+	badge.className = 'fixed-badge';
+	badge.innerHTML = `
+		<img class="fixed-badge-img" src="media/icons/fixed_badge.svg" alt="Contact badge">
+	`;
+	document.body.appendChild(badge);
+
+	// Create modal overlay (hidden by default)
+	const modalOverlay = document.createElement('div');
+	modalOverlay.className = 'fixed-badge-modal-overlay';
+	modalOverlay.innerHTML = `
+		<div class="fixed-badge-modal" role="dialog" aria-modal="true">
+			<div class="popup-top"></div>
+			<img src="media/icons/Pop-up.svg" alt="Contact popup">
+			<div class="popup-bottom">
+				<button class="popup-action btn">Contact us</button>
+			</div>
+		</div>
+	`;
+	document.body.appendChild(modalOverlay);
+
+	const badgeImg = badge.querySelector('.fixed-badge-img');
+
+	function openModal(){
+		modalOverlay.classList.add('open');
+		// prevent background scroll
+		document.documentElement.style.overflow = 'hidden';
+		document.body.style.overflow = 'hidden';
+	}
+
+	function closeModal(){
+		modalOverlay.classList.remove('open');
+		document.documentElement.style.overflow = '';
+		document.body.style.overflow = '';
+	}
+
+	// open modal when clicking the fixed badge image
+	badgeImg && badgeImg.addEventListener('click', (e) => {
+		e.stopPropagation();
+		openModal();
+	});
+
+	// close when clicking overlay (but not the modal content)
+	modalOverlay.addEventListener('click', (e) => {
+		if (e.target === modalOverlay) closeModal();
+	});
+
+	// close on ESC
+	document.addEventListener('keydown', (e) => {
+		if (e.key === 'Escape' && modalOverlay.classList.contains('open')) closeModal();
+	});
+
+	// wire up popup action button: close modal and go to contact calendar
+	const popupAction = modalOverlay.querySelector('.popup-action');
+	if(popupAction){
+		popupAction.addEventListener('click', () => {
+			closeModal();
+			window.location = 'contact.html#calendar';
+		});
+	}
+
+	function updateBadge(){
+		if(!bannerEl){
+			// If no banner on page, show badge
+			badge.classList.add('show');
+			return;
+		}
+		const rect = bannerEl.getBoundingClientRect();
+		// Show badge when banner has scrolled completely out of view
+		if(rect.bottom <= 0){
+			badge.classList.add('show');
+		} else {
+			badge.classList.remove('show');
+		}
+	}
+
+	// Listen for scroll/resize to toggle badge
+	window.addEventListener('scroll', updateBadge, { passive: true });
+	window.addEventListener('resize', updateBadge);
+	// Initial check
+	updateBadge();
+})();
