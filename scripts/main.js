@@ -36,7 +36,7 @@ function Tack_to_contac(){
 
 const what_we_do=document.getElementById("what-we-do")
 
-fetch('scripts/what_we_do.json')
+fetch('data/what_we_do.json')
 .then(res=>res.json())
 .then(data=>{
 	data.forEach(item=>{
@@ -83,7 +83,7 @@ function escapeHTML(str){
 	return String(str||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
 }
 
-fetch("scripts/home-data.json")
+fetch("data/home-data.json")
 .then(res=>res.json())
 .then(data=>{
 	if(!faq_con) return;
@@ -158,7 +158,7 @@ fetch("scripts/home-data.json")
 
 // Marquee section mapping for our_portfolio_images (with new CSS)
 // Reviews rendering for About page
-fetch('scripts/review.json')
+fetch('data/review.json')
 	.then(res => res.json())
 	.then(data => {
 		const reviewsContainer = document.getElementById('reviews_section');
