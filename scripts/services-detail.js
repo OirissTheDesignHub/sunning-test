@@ -21,7 +21,7 @@
     return;
   }
 
-  fetch('scripts/services-data.json')
+  fetch('data/services-data.json')
     .then(res => res.json())
     .then(data => {
       const item = data.find(s => s.id === id);
