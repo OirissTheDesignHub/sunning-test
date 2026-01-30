@@ -29,7 +29,7 @@
 
 /* function to redirect to contactus page */
 function Tack_to_contac(){
-    window.location="contact.html#calendar"
+	window.location = 'contact.html#calendar';
 }
 
 /* -------------------------- what we do ------------------------- */
@@ -47,29 +47,10 @@ fetch('data/what_we_do.json')
 			<div class="what-desc">
 				<h2 class="tc-o">${item.title}</h2>
 				<p class="mt-10 ">${item.description}</p>
-				<button class="btn mt-10 btn-transform">READ MORE</button>
+				<button class="btn mt-10 btn-transform" onclick=Tack_to_contac()>LEARN MORE</button>
 			</div>
 		</div>
 		`
-
-		// add click handler to READ MORE button to redirect with the item's id
-		const readBtn = div.querySelector('button');
-		const itemId = item.id ?? item.ide ?? item.slug ?? item.title ?? '';
-		if(readBtn){
-			readBtn.addEventListener('click', () => {
-				if(itemId) {
-					window.location = 'services.html?id=' + encodeURIComponent(itemId);
-				} else {
-					window.location = 'services.html';
-				}
-			});
-			readBtn.addEventListener('keydown', (e) => {
-				if (e.key === 'Enter' || e.key === ' ') {
-					e.preventDefault();
-					readBtn.click();
-				}
-			});
-		}
 
 		what_we_do.appendChild(div)
 	})
