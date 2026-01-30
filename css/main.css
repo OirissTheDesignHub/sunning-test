@@ -46,7 +46,14 @@ body{
 .services_banner{
   background-image: url('../media/banners/services_banner.svg');
 }
+.calender_background{
+  background-image: url('../media/banners/calender_background.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: auto;
 
+}
 /* -------------------------------------------- common code ------------------------------------ */
 .tc-b{
   color: var(--black);
