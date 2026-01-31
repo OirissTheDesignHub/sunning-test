@@ -1,17 +1,52 @@
 [
     {
-        "name":"Jane Smith",
-        "comment":"Professional team and great results. Highly recommend.",
-        "rating":"4"
+        "name": "Jane Smith",
+        "comment": "Professional team and great results. Highly recommend.",
+        "rating": "4"
     },
     {
-        "name":"Alex Lee",
-        "comment":"They helped us grow our brand online. Very satisfied!",
-        "rating":"5"
+        "name": "Alex Lee",
+        "comment": "They helped us grow our brand online. Very satisfied!",
+        "rating": "5"
     },
     {
-        "name":"John Doe",
-        "comment":"Amazing service! My website traffic doubled in a month.",
-        "rating":"5"
+        "name": "John Doe",
+        "comment": "Amazing service! My website traffic doubled in a month.",
+        "rating": "5"
+    },
+    {
+        "name": "Maria Gonzalez",
+        "comment": "Excellent communication and fast delivery. Will work with them again.",
+        "rating": "5"
+    },
+    {
+        "name": "David Kim",
+        "comment": "Good results overall, but reporting could be more detailed.",
+        "rating": "3"
+    },
+    {
+        "name": "Sophia Patel",
+        "comment": "Creative strategies that really boosted our social media presence.",
+        "rating": "5"
+    },
+    {
+        "name": "Michael Brown",
+        "comment": "Solid work, though the project took longer than expected.",
+        "rating": "4"
+    },
+    {
+        "name": "Emily Johnson",
+        "comment": "Friendly staff and great customer support. Highly recommend!",
+        "rating": "5"
+    },
+    {
+        "name": "Chris Evans",
+        "comment": "They understood our needs perfectly and delivered beyond expectations.",
+        "rating": "5"
+    },
+    {
+        "name": "Olivia Chen",
+        "comment": "Decent service, but pricing felt a bit high compared to competitors.",
+        "rating": "3"
     }
 ]
