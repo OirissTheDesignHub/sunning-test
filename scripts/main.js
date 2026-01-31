@@ -145,28 +145,29 @@ fetch("data/home-data.json")
 
 
 // Marquee section mapping for our_portfolio_images (with new CSS)
-// Reviews rendering for About page
+// Reviews rendering for About page (continuous marquee)
 fetch('data/review.json')
 	.then(res => res.json())
 	.then(data => {
 		const reviewsContainer = document.getElementById('reviews_section');
-		if (!reviewsContainer || !Array.isArray(data)) return;
-		reviewsContainer.innerHTML = '';
-		data.forEach((item, i) => {
-			const card = document.createElement('div');
-			card.className = 'review-card mt-10';
+		if (!reviewsContainer || !Array.isArray(data) || data.length === 0) return;
 
+		// build slider structure
+		reviewsContainer.innerHTML = '<div class="reviews-slider"><div class="reviews-track"></div></div>';
+		const track = reviewsContainer.querySelector('.reviews-track');
+
+		// helper to create a card element
+		function makeCard(item){
+			const card = document.createElement('div');
+			card.className = 'review-card';
 			const name = escapeHTML(item.name || item.user || 'Anonymous');
 			const rating = Number(item.rating) || 0;
 			const comment = escapeHTML(item.comment || item.text || item.review || '');
-
-			// build star icons (filled + outline)
 			let stars = '';
 			for (let s = 1; s <= 5; s++) {
 				if (s <= rating) stars += '<i class="bi bi-star-fill tc-o" aria-hidden="true"></i>';
 				else stars += '<i class="bi bi-star tc-b" aria-hidden="true"></i>';
 			}
-
 			card.innerHTML = `
 				<div class="outer-box rd-m-h2 pd-20 bg-white review-card-inner">
 					<div class="review-header">
@@ -176,9 +177,29 @@ fetch('data/review.json')
 					<p class="tc-b mt-10 review-comment">${comment}</p>
 				</div>
 			`;
+			return card;
+		}
 
-			reviewsContainer.appendChild(card);
-		});
+		// append original items
+		data.forEach(item => track.appendChild(makeCard(item)));
+		// duplicate items to enable seamless marquee
+		data.forEach(item => track.appendChild(makeCard(item)));
+
+		// set animation duration proportional to items (longer for more items)
+		const duration = Math.max(10, data.length * 2); // seconds
+		track.style.animation = `reviews-scroll ${duration}s linear infinite`;
+
+		// pause on hover/focus
+		const sliderViewport = reviewsContainer.querySelector('.reviews-slider');
+		sliderViewport.addEventListener('mouseenter', () => track.style.animationPlayState = 'paused');
+		sliderViewport.addEventListener('mouseleave', () => track.style.animationPlayState = 'running');
+		sliderViewport.addEventListener('focusin', () => track.style.animationPlayState = 'paused');
+		sliderViewport.addEventListener('focusout', () => track.style.animationPlayState = 'running');
+
+		// respect reduced motion
+		if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+			track.style.animation = 'none';
+		}
 	})
 	.catch(err => console.error('Failed to load reviews', err));
 
