@@ -664,6 +664,7 @@ form{
   flex: 1 1 calc(33.333% - 40px);
   max-width: 360px;
   box-sizing: border-box;
+  cursor: pointer;
 }
 .review-card .outer-box.review-card-inner{
   display: flex;
