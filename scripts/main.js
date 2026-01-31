@@ -76,11 +76,18 @@ fetch("data/home-data.json")
 		const qText = escapeHTML(item.question || item.questionText || '');
 		const aText = escapeHTML(item.ans || item.answer || '');
 
+		// alternate styles: questions alternate background; answers invert background accordingly
+		// For index 0 (1st), question: bg-o tc-w, answer: white + shadow
+		// For index 1 (2nd), question: bg-white, answer: bg-o tc-w
+		const isOdd = i % 2 === 0; // 0 -> first item
+		const qClass = `faq-question outer-box rd-m-h2 ${isOdd ? 'bg-o tc-w' : 'bg-white'}`;
+		const aClass = isOdd ? 'faq-answer mb faq-shadow' : 'faq-answer mb bg-o tc-w';
+
 		wrapper.innerHTML = `
-			<div class="faq-question outer-box rd-m-h2" role="button" tabindex="0" id="faq-q-${i+1}" aria-expanded="false" aria-controls="faq-a-${i+1}">
+			<div class="${qClass}" role="button" tabindex="0" id="faq-q-${i+1}" aria-expanded="false" aria-controls="faq-a-${i+1}">
 				${qText} <span class="faq-plus" aria-hidden="true">+</span>
 			</div>
-			<div class="faq-answer mb bg-o tc-w" id="faq-a-${i+1}" aria-hidden="true" style="overflow:hidden;transition:max-height 0.25s ease;max-height:0px;">
+			<div class="${aClass}" id="faq-a-${i+1}" aria-hidden="true" style="overflow:hidden;transition:max-height 0.25s ease;max-height:0px;">
 				<p>${aText}</p>
 			</div>
 		`;
